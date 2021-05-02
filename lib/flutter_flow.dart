@@ -1,18 +1,31 @@
-// You have generated a new plugin project without
-// specifying the `--platforms` flag. A plugin project supports no platforms is generated.
-// To add platforms, run `flutter create -t plugin --platforms <platforms> .` under the same
-// directory. You can also find a detailed instruction on how to add platforms in the `pubspec.yaml` at https://flutter.dev/docs/development/packages-and-plugins/developing-packages#plugin-platforms.
+import 'package:flutter_flow/src/models/v2/dialogflow_v2.dart';
+import 'package:flutter_flow/src/providers/google_auth_provider.dart';
+import 'package:flutter_flow/src/datasource/dialogflow/dialogflow_client.dart';
 
-import 'dart:async';
-
-import 'package:flutter/services.dart';
+export 'package:flutter_flow/src/providers/google_auth_provider.dart';
+export 'package:flutter_flow/src/models/v2/dialogflow_v2.dart';
 
 class FlutterFlow {
-  static const MethodChannel _channel =
-      const MethodChannel('flutter_flow');
+  final GoogleAuthProvider googleAuthProvider;
+  final String language;
+  final String payload;
+  final bool init;
+  const FlutterFlow({
+    required this.googleAuthProvider,
+    this.language = 'en',
+    this.payload = '',
+    this.init = false,
+  });
 
-  static Future<String> get platformVersion async {
-    final String version = await _channel.invokeMethod('getPlatformVersion');
-    return version;
+  Future<DialogflowV2> reply({required String query}) async {
+    final String _queryParam = '{"resetContexts": $init }' +
+        (payload.isEmpty ? '' : ', "payload" : $payload');
+    final _body =
+        '{"queryInput":{"text":{"text":"$query","language_code":"$language"}}, "queryParams": $_queryParam}';
+    var _response = await googleAuthProvider.request(
+        url: googleAuthProvider.url,
+        header: {'authorization': 'Bearer ${googleAuthProvider.getToken}'},
+        body: _body);
+    return DialogflowV2.fromJson(_response.data);
   }
 }
