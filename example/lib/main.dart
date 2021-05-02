@@ -14,31 +14,24 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  String _platformVersion = 'Unknown';
+  String response = 'Unknown';
 
   @override
   void initState() {
     super.initState();
-    initPlatformState();
   }
 
   // Platform messages are asynchronous, so we initialize in an async method.
-  Future<void> initPlatformState() async {
-    String platformVersion;
-    // Platform messages may fail, so we use a try/catch PlatformException.
-    try {
-      platformVersion = await FlutterFlow.platformVersion;
-    } on PlatformException {
-      platformVersion = 'Failed to get platform version.';
-    }
-
-    // If the widget was removed from the tree while the asynchronous platform
-    // message was in flight, we want to discard the reply rather than calling
-    // setState to update our non-existent appearance.
+  Future<void> request() async {
+    GoogleAuthProvider googleAuthProvider =
+        await GoogleAuthProvider(asset: 'assets/hisab-gdc.json').authenticate();
+    FlutterFlow flutterFlow =
+        FlutterFlow(googleAuthProvider: googleAuthProvider, language: 'en');
+    DialogflowV2 data = await flutterFlow.reply(query: 'hola');
     if (!mounted) return;
 
     setState(() {
-      _platformVersion = platformVersion;
+      response = data.queryResult.fulfillmentText;
     });
   }
 
@@ -49,8 +42,16 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: const Text('Plugin example app'),
         ),
-        body: Center(
-          child: Text('Running on: $_platformVersion\n'),
+        body: Column(
+          children: [
+            Center(
+              child: Text('Running on: $response\n'),
+            ),
+            ElevatedButton(
+              onPressed: () async => await request(),
+              child: Text('request'),
+            ),
+          ],
         ),
       ),
     );

@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "hisab-gdc",
+  "private_key_id": "d6ab2f461ab6c420b7972840b6dea04eb1fc1fe6",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCcvpvflPNt2wZE\n9kACsQT7pP+IDOniXTVuBJxLVcAMzdX7JWKzG58NK1U2BprVcAmG1xm5HKpMXkum\naNbddVOMK0+WELcfBPfqQ7r3O+i+KJoJIVLjz5TZGxGRt3+ARoRGUlFO9JeAvKLb\nqMbeLK6nfA/7ftqe+F4i/H9kb0ul/42jHeG4NL54JYlk1tooXX+7kap6YMcKvRQu\nIaJOMAba/i/FW8RgmB1SzM3YprSPV67GKHLJsga+lqmLAVnnikR67COODkJ2AMnx\n4rm6ZkH35k7dNj6UMMxVBRu47niSUnEW6WP1lnihFtSvMnIahip4jBrSDPHQiqDn\nE9aRixYRAgMBAAECggEALHNrrezGWhWeggkZnwnHgXvJ0bHj1AOd5tzc3Apt49Ot\nxsLT6jo/kVMEH8WgvD3BHeG7VEE6VFz7dC5QHM6silgwAj0sSVo12lQp3fo550+J\nW2R9ZsiUDDu+cEYLHPwif/TRRSRdIK+eOc/z0cb3It0uhSJ06ldCDwbvM7LST7kn\nMFO6c9MvIxn4zxF2HOeXv8B2pWU+0TS2AP7pZgnq2jCDnYVPBVuQj4yXZr99kHBG\negWvKJRHm+Uia+WeksJRTude1ApqQVwSd3Xp0f741fuPR8gW+TKlQCAq/y1yRJy9\nSMVegfRbZB5I61lzJ0LptdReJInzWaWtLE+EThuftwKBgQDNp18LjGugdBKGYxIt\nBUMPtMrl5Dw+2Mg/5Js/cuNMBfXnQJWZjr7QAgJzA3PFmzsrz1/SIaSEW5PHgDFY\nNwmwe6r6jDhgnNYj4ZVVEN671NihpTT8ma2fyZyd3fCxPKAF8GhPgZ5pbbrM6Unr\nGEqB4tS3p8LwLdyfOideqkr45wKBgQDDHgYNWYOV8ZoBvvr+ByAFWr9vQCGfa0i7\nVRpyPjp5QHdFeyBW38e9thjxrtUc+VyOSEM8ZcBpo5hUFco8UihTdkZWCUNnTXNZ\n5+I2Y51RKXzGibOMFGY6cGChu39YoYDHIJmRCTbNihmXEGMYzHGnWURtrt1A/s7V\nODEaf7fCRwKBgCN2WhBevWxkt5EO4mJ7Bs5diaNM0QqxTQ6feBnf0MwaNwYSf/mD\nwOmTfyKgFMWdd/2c+9P7Uygztm7vbxLcIsKZAKnFpi8avF5hluOdThsrn9N37oQk\nZ+km1efvDoMxhhKgGwyiuFNLxatyCvoMLUTqfW3R8u6BqgqW95T+XoE/AoGAZzeB\nwhwhZPfbHaNXCXzhbpO0A3kskDXj0t3RULAkpLH6pnHdCLf25R/okCmJqXssgEQv\n9UpqgDe/xHOGeWSI2qYNzUO3OXWaWOw3GciWlzHYRPrhVXARKEb8h3I1isBc7HoN\nYtE6AX9VzDkqAxtb4Ehzz4Yam2BwMBE6wKbhoc8CgYAy6mzGFEKvqtrHnCY0blBV\nDHEW/xybXl4dqeLn6m7hAP5pkz6MxnSqyQ4bKFyuPfov6+12w7tTj9zmUhaW/xnc\nhcIdgBD8DWV7s6fCjbChh4h243Wr7CqHY1/6IQYtT7rp0vdxK1IL3ezmVwu7Jp5Q\n9rg1aHhVuOX9boupf3btIA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "hisab-chatbot@hisab-gdc.iam.gserviceaccount.com",
+  "client_id": "103978211914038402409",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/hisab-chatbot%40hisab-gdc.iam.gserviceaccount.com"
+}
