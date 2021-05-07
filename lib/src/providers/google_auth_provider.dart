@@ -20,8 +20,7 @@ class GoogleAuthProvider {
     try {
       final _asset = await rootBundle.loadString(asset);
       _projectId = json.decode(_asset)['project_id'];
-      dynamic clientCredentials =
-          new ServiceAccountCredentials.fromJson(_asset);
+      final clientCredentials = ServiceAccountCredentials.fromJson(_asset);
       final _autoRefreshClient =
           await clientViaServiceAccount(clientCredentials, scopes!);
       _accessCredentials = _autoRefreshClient.credentials;

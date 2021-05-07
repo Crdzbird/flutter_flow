@@ -21,7 +21,7 @@ class _$FulfillmentMessageTearOff {
   const _$FulfillmentMessageTearOff();
 
   _FulfillmentMessage call(
-      {required Text? text,
+      {required DialogText? text,
       required String? platform,
       required QuickReplies? quickReplies}) {
     return _FulfillmentMessage(
@@ -41,7 +41,7 @@ const $FulfillmentMessage = _$FulfillmentMessageTearOff();
 
 /// @nodoc
 mixin _$FulfillmentMessage {
-  Text? get text => throw _privateConstructorUsedError;
+  DialogText? get text => throw _privateConstructorUsedError;
   String? get platform => throw _privateConstructorUsedError;
   QuickReplies? get quickReplies => throw _privateConstructorUsedError;
 
@@ -56,9 +56,9 @@ abstract class $FulfillmentMessageCopyWith<$Res> {
   factory $FulfillmentMessageCopyWith(
           FulfillmentMessage value, $Res Function(FulfillmentMessage) then) =
       _$FulfillmentMessageCopyWithImpl<$Res>;
-  $Res call({Text? text, String? platform, QuickReplies? quickReplies});
+  $Res call({DialogText? text, String? platform, QuickReplies? quickReplies});
 
-  $TextCopyWith<$Res>? get text;
+  $DialogTextCopyWith<$Res>? get text;
   $QuickRepliesCopyWith<$Res>? get quickReplies;
 }
 
@@ -81,7 +81,7 @@ class _$FulfillmentMessageCopyWithImpl<$Res>
       text: text == freezed
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
-              as Text?,
+              as DialogText?,
       platform: platform == freezed
           ? _value.platform
           : platform // ignore: cast_nullable_to_non_nullable
@@ -94,12 +94,12 @@ class _$FulfillmentMessageCopyWithImpl<$Res>
   }
 
   @override
-  $TextCopyWith<$Res>? get text {
+  $DialogTextCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
     }
 
-    return $TextCopyWith<$Res>(_value.text!, (value) {
+    return $DialogTextCopyWith<$Res>(_value.text!, (value) {
       return _then(_value.copyWith(text: value));
     });
   }
@@ -123,10 +123,10 @@ abstract class _$FulfillmentMessageCopyWith<$Res>
           _FulfillmentMessage value, $Res Function(_FulfillmentMessage) then) =
       __$FulfillmentMessageCopyWithImpl<$Res>;
   @override
-  $Res call({Text? text, String? platform, QuickReplies? quickReplies});
+  $Res call({DialogText? text, String? platform, QuickReplies? quickReplies});
 
   @override
-  $TextCopyWith<$Res>? get text;
+  $DialogTextCopyWith<$Res>? get text;
   @override
   $QuickRepliesCopyWith<$Res>? get quickReplies;
 }
@@ -152,7 +152,7 @@ class __$FulfillmentMessageCopyWithImpl<$Res>
       text: text == freezed
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
-              as Text?,
+              as DialogText?,
       platform: platform == freezed
           ? _value.platform
           : platform // ignore: cast_nullable_to_non_nullable
@@ -175,7 +175,7 @@ class _$_FulfillmentMessage implements _FulfillmentMessage {
       _$_$_FulfillmentMessageFromJson(json);
 
   @override
-  final Text? text;
+  final DialogText? text;
   @override
   final String? platform;
   @override
@@ -220,7 +220,7 @@ class _$_FulfillmentMessage implements _FulfillmentMessage {
 
 abstract class _FulfillmentMessage implements FulfillmentMessage {
   const factory _FulfillmentMessage(
-      {required Text? text,
+      {required DialogText? text,
       required String? platform,
       required QuickReplies? quickReplies}) = _$_FulfillmentMessage;
 
@@ -228,7 +228,7 @@ abstract class _FulfillmentMessage implements FulfillmentMessage {
       _$_FulfillmentMessage.fromJson;
 
   @override
-  Text? get text => throw _privateConstructorUsedError;
+  DialogText? get text => throw _privateConstructorUsedError;
   @override
   String? get platform => throw _privateConstructorUsedError;
   @override

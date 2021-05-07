@@ -1,0 +1,9 @@
+export 'v2/diagnostic_information.dart';
+export 'v2/dialogflow_v2.dart';
+export 'v2/fulfillment_message.dart';
+export 'v2/intent.dart';
+export 'v2/parameters.dart';
+export 'v2/query_result.dart';
+export 'v2/quick_replies.dart';
+export 'v2/dialog_text.dart';
+export 'v2/webhook_status.dart';

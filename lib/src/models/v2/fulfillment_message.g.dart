@@ -11,7 +11,7 @@ _$_FulfillmentMessage _$_$_FulfillmentMessageFromJson(
   return _$_FulfillmentMessage(
     text: json['text'] == null
         ? null
-        : Text.fromJson(json['text'] as Map<String, dynamic>),
+        : DialogText.fromJson(json['text'] as Map<String, dynamic>),
     platform: json['platform'] as String?,
     quickReplies: json['quickReplies'] == null
         ? null

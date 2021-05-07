@@ -1,9 +1,8 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:flutter_flow/flutter_flow.dart';
 
 void main() {
-  const MethodChannel channel = MethodChannel('flutter_flow');
+  const channel = MethodChannel('flutter_flow');
 
   TestWidgetsFlutterBinding.ensureInitialized();
 

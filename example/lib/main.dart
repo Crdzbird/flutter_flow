@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 
-import 'package:flutter/services.dart';
 import 'package:flutter_flow/flutter_flow.dart';
 
 void main() {
@@ -23,11 +22,11 @@ class _MyAppState extends State<MyApp> {
 
   // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> request() async {
-    GoogleAuthProvider googleAuthProvider =
+    var googleAuthProvider =
         await GoogleAuthProvider(asset: 'assets/hisab-gdc.json').authenticate();
-    FlutterFlow flutterFlow =
+    var flutterFlow =
         FlutterFlow(googleAuthProvider: googleAuthProvider, language: 'en');
-    DialogflowV2 data = await flutterFlow.reply(query: 'hola');
+    var data = await flutterFlow.reply(query: 'hi');
     if (!mounted) return;
 
     setState(() {
@@ -40,7 +39,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Plugin example app'),
+          title: Text('Plugin example app'),
         ),
         body: Column(
           children: [

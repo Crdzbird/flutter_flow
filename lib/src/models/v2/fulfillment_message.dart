@@ -1,5 +1,5 @@
 import 'package:flutter_flow/src/models/v2/quick_replies.dart';
-import 'package:flutter_flow/src/models/v2/text.dart';
+import 'package:flutter_flow/src/models/v2/dialog_text.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'fulfillment_message.freezed.dart';
@@ -8,7 +8,7 @@ part 'fulfillment_message.g.dart';
 @freezed
 class FulfillmentMessage with _$FulfillmentMessage {
   const factory FulfillmentMessage({
-    required Text? text,
+    required DialogText? text,
     required String? platform,
     required QuickReplies? quickReplies,
   }) = _FulfillmentMessage;
