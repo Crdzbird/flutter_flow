@@ -20,7 +20,7 @@ DialogText _$DialogTextFromJson(Map<String, dynamic> json) {
 class _$DialogTextTearOff {
   const _$DialogTextTearOff();
 
-  _DialogText call({required List<String> text}) {
+  _DialogText call({required List<String?>? text}) {
     return _DialogText(
       text: text,
     );
@@ -36,7 +36,7 @@ const $DialogText = _$DialogTextTearOff();
 
 /// @nodoc
 mixin _$DialogText {
-  List<String> get text => throw _privateConstructorUsedError;
+  List<String?>? get text => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -49,7 +49,7 @@ abstract class $DialogTextCopyWith<$Res> {
   factory $DialogTextCopyWith(
           DialogText value, $Res Function(DialogText) then) =
       _$DialogTextCopyWithImpl<$Res>;
-  $Res call({List<String> text});
+  $Res call({List<String?>? text});
 }
 
 /// @nodoc
@@ -68,7 +68,7 @@ class _$DialogTextCopyWithImpl<$Res> implements $DialogTextCopyWith<$Res> {
       text: text == freezed
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>?,
     ));
   }
 }
@@ -79,7 +79,7 @@ abstract class _$DialogTextCopyWith<$Res> implements $DialogTextCopyWith<$Res> {
           _DialogText value, $Res Function(_DialogText) then) =
       __$DialogTextCopyWithImpl<$Res>;
   @override
-  $Res call({List<String> text});
+  $Res call({List<String?>? text});
 }
 
 /// @nodoc
@@ -100,7 +100,7 @@ class __$DialogTextCopyWithImpl<$Res> extends _$DialogTextCopyWithImpl<$Res>
       text: text == freezed
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String?>?,
     ));
   }
 }
@@ -114,7 +114,7 @@ class _$_DialogText implements _DialogText {
       _$_$_DialogTextFromJson(json);
 
   @override
-  final List<String> text;
+  final List<String?>? text;
 
   @override
   String toString() {
@@ -145,13 +145,13 @@ class _$_DialogText implements _DialogText {
 }
 
 abstract class _DialogText implements DialogText {
-  const factory _DialogText({required List<String> text}) = _$_DialogText;
+  const factory _DialogText({required List<String?>? text}) = _$_DialogText;
 
   factory _DialogText.fromJson(Map<String, dynamic> json) =
       _$_DialogText.fromJson;
 
   @override
-  List<String> get text => throw _privateConstructorUsedError;
+  List<String?>? get text => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$DialogTextCopyWith<_DialogText> get copyWith =>

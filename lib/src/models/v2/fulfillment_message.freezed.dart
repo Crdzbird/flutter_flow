@@ -23,11 +23,13 @@ class _$FulfillmentMessageTearOff {
   _FulfillmentMessage call(
       {required DialogText? text,
       required String? platform,
-      required QuickReplies? quickReplies}) {
+      required QuickReplies? quickReplies,
+      required Payload? payload}) {
     return _FulfillmentMessage(
       text: text,
       platform: platform,
       quickReplies: quickReplies,
+      payload: payload,
     );
   }
 
@@ -44,6 +46,7 @@ mixin _$FulfillmentMessage {
   DialogText? get text => throw _privateConstructorUsedError;
   String? get platform => throw _privateConstructorUsedError;
   QuickReplies? get quickReplies => throw _privateConstructorUsedError;
+  Payload? get payload => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -56,10 +59,15 @@ abstract class $FulfillmentMessageCopyWith<$Res> {
   factory $FulfillmentMessageCopyWith(
           FulfillmentMessage value, $Res Function(FulfillmentMessage) then) =
       _$FulfillmentMessageCopyWithImpl<$Res>;
-  $Res call({DialogText? text, String? platform, QuickReplies? quickReplies});
+  $Res call(
+      {DialogText? text,
+      String? platform,
+      QuickReplies? quickReplies,
+      Payload? payload});
 
   $DialogTextCopyWith<$Res>? get text;
   $QuickRepliesCopyWith<$Res>? get quickReplies;
+  $PayloadCopyWith<$Res>? get payload;
 }
 
 /// @nodoc
@@ -76,6 +84,7 @@ class _$FulfillmentMessageCopyWithImpl<$Res>
     Object? text = freezed,
     Object? platform = freezed,
     Object? quickReplies = freezed,
+    Object? payload = freezed,
   }) {
     return _then(_value.copyWith(
       text: text == freezed
@@ -90,6 +99,10 @@ class _$FulfillmentMessageCopyWithImpl<$Res>
           ? _value.quickReplies
           : quickReplies // ignore: cast_nullable_to_non_nullable
               as QuickReplies?,
+      payload: payload == freezed
+          ? _value.payload
+          : payload // ignore: cast_nullable_to_non_nullable
+              as Payload?,
     ));
   }
 
@@ -114,6 +127,17 @@ class _$FulfillmentMessageCopyWithImpl<$Res>
       return _then(_value.copyWith(quickReplies: value));
     });
   }
+
+  @override
+  $PayloadCopyWith<$Res>? get payload {
+    if (_value.payload == null) {
+      return null;
+    }
+
+    return $PayloadCopyWith<$Res>(_value.payload!, (value) {
+      return _then(_value.copyWith(payload: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -123,12 +147,18 @@ abstract class _$FulfillmentMessageCopyWith<$Res>
           _FulfillmentMessage value, $Res Function(_FulfillmentMessage) then) =
       __$FulfillmentMessageCopyWithImpl<$Res>;
   @override
-  $Res call({DialogText? text, String? platform, QuickReplies? quickReplies});
+  $Res call(
+      {DialogText? text,
+      String? platform,
+      QuickReplies? quickReplies,
+      Payload? payload});
 
   @override
   $DialogTextCopyWith<$Res>? get text;
   @override
   $QuickRepliesCopyWith<$Res>? get quickReplies;
+  @override
+  $PayloadCopyWith<$Res>? get payload;
 }
 
 /// @nodoc
@@ -147,6 +177,7 @@ class __$FulfillmentMessageCopyWithImpl<$Res>
     Object? text = freezed,
     Object? platform = freezed,
     Object? quickReplies = freezed,
+    Object? payload = freezed,
   }) {
     return _then(_FulfillmentMessage(
       text: text == freezed
@@ -161,6 +192,10 @@ class __$FulfillmentMessageCopyWithImpl<$Res>
           ? _value.quickReplies
           : quickReplies // ignore: cast_nullable_to_non_nullable
               as QuickReplies?,
+      payload: payload == freezed
+          ? _value.payload
+          : payload // ignore: cast_nullable_to_non_nullable
+              as Payload?,
     ));
   }
 }
@@ -169,7 +204,10 @@ class __$FulfillmentMessageCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_FulfillmentMessage implements _FulfillmentMessage {
   const _$_FulfillmentMessage(
-      {required this.text, required this.platform, required this.quickReplies});
+      {required this.text,
+      required this.platform,
+      required this.quickReplies,
+      required this.payload});
 
   factory _$_FulfillmentMessage.fromJson(Map<String, dynamic> json) =>
       _$_$_FulfillmentMessageFromJson(json);
@@ -180,10 +218,12 @@ class _$_FulfillmentMessage implements _FulfillmentMessage {
   final String? platform;
   @override
   final QuickReplies? quickReplies;
+  @override
+  final Payload? payload;
 
   @override
   String toString() {
-    return 'FulfillmentMessage(text: $text, platform: $platform, quickReplies: $quickReplies)';
+    return 'FulfillmentMessage(text: $text, platform: $platform, quickReplies: $quickReplies, payload: $payload)';
   }
 
   @override
@@ -197,7 +237,9 @@ class _$_FulfillmentMessage implements _FulfillmentMessage {
                     .equals(other.platform, platform)) &&
             (identical(other.quickReplies, quickReplies) ||
                 const DeepCollectionEquality()
-                    .equals(other.quickReplies, quickReplies)));
+                    .equals(other.quickReplies, quickReplies)) &&
+            (identical(other.payload, payload) ||
+                const DeepCollectionEquality().equals(other.payload, payload)));
   }
 
   @override
@@ -205,7 +247,8 @@ class _$_FulfillmentMessage implements _FulfillmentMessage {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(platform) ^
-      const DeepCollectionEquality().hash(quickReplies);
+      const DeepCollectionEquality().hash(quickReplies) ^
+      const DeepCollectionEquality().hash(payload);
 
   @JsonKey(ignore: true)
   @override
@@ -222,7 +265,8 @@ abstract class _FulfillmentMessage implements FulfillmentMessage {
   const factory _FulfillmentMessage(
       {required DialogText? text,
       required String? platform,
-      required QuickReplies? quickReplies}) = _$_FulfillmentMessage;
+      required QuickReplies? quickReplies,
+      required Payload? payload}) = _$_FulfillmentMessage;
 
   factory _FulfillmentMessage.fromJson(Map<String, dynamic> json) =
       _$_FulfillmentMessage.fromJson;
@@ -233,6 +277,8 @@ abstract class _FulfillmentMessage implements FulfillmentMessage {
   String? get platform => throw _privateConstructorUsedError;
   @override
   QuickReplies? get quickReplies => throw _privateConstructorUsedError;
+  @override
+  Payload? get payload => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$FulfillmentMessageCopyWith<_FulfillmentMessage> get copyWith =>

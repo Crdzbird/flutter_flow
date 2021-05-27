@@ -16,6 +16,9 @@ _$_FulfillmentMessage _$_$_FulfillmentMessageFromJson(
     quickReplies: json['quickReplies'] == null
         ? null
         : QuickReplies.fromJson(json['quickReplies'] as Map<String, dynamic>),
+    payload: json['payload'] == null
+        ? null
+        : Payload.fromJson(json['payload'] as Map<String, dynamic>),
   );
 }
 
@@ -25,4 +28,5 @@ Map<String, dynamic> _$_$_FulfillmentMessageToJson(
       'text': instance.text,
       'platform': instance.platform,
       'quickReplies': instance.quickReplies,
+      'payload': instance.payload,
     };

@@ -1,0 +1,4 @@
+enum PayloadButtonType {
+  URL,
+  POSTBACK,
+}

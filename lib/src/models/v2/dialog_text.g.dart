@@ -8,7 +8,7 @@ part of 'dialog_text.dart';
 
 _$_DialogText _$_$_DialogTextFromJson(Map<String, dynamic> json) {
   return _$_DialogText(
-    text: (json['text'] as List<dynamic>).map((e) => e as String).toList(),
+    text: (json['text'] as List<dynamic>?)?.map((e) => e as String?).toList(),
   );
 }
 

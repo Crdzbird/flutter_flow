@@ -8,3 +8,5 @@ export 'v2/parameters.dart';
 export 'v2/query_result.dart';
 export 'v2/quick_replies.dart';
 export 'v2/webhook_status.dart';
+export 'v2/payload.dart';
+export 'v2/payload_button.dart';

@@ -1,0 +1,9 @@
+enum BotPlatform {
+  FACEBOOK,
+  GOOGLE_ASSISTANT,
+  SLACK,
+  TELEGRAM,
+  KIK,
+  VIBER,
+  SKYPE
+}

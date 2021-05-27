@@ -1,10 +1,13 @@
+import 'dart:io';
+
 import 'package:flutter_flow/src/models/v2/dialogflow_v2.dart';
 import 'package:flutter_flow/src/providers/google_auth_provider.dart';
-import 'package:flutter_flow/src/datasource/dialogflow/dialogflow_client.dart';
+import 'package:flutter_flow/src/extensions/dialogflow/dialogflow_client.dart';
 
 import 'package:flutter_flow/src/models/models.dart';
 
-export 'datasource/datasource.dart';
+export 'extensions/extensions.dart';
+export 'enums/enums.dart';
 export 'models/models.dart';
 export 'providers/providers.dart';
 
@@ -30,7 +33,10 @@ class FlutterFlow {
     ).toJson();
     var _response = await googleAuthProvider.request(
         url: googleAuthProvider.url,
-        header: {'authorization': 'Bearer ${googleAuthProvider.getToken}'},
+        header: {
+          HttpHeaders.authorizationHeader:
+              'Bearer ${googleAuthProvider.getToken}'
+        },
         body: _queryBody);
     return DialogflowV2.fromJson(_response.data);
   }
