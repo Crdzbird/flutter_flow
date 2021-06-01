@@ -11,11 +11,14 @@ class ChatLayout extends StatefulWidget {
 
 class _ChatLayoutState extends State<ChatLayout> {
   final List<Widget> chat = [];
-  final TextEditingController chatController = TextEditingController();
+  final TextEditingController chatController =
+      TextEditingController(text: 'hola');
 
   @override
   Widget build(BuildContext context) {
+    chatController.text = 'hola';
     return Scaffold(
+      backgroundColor: Colors.cyan,
       body: Stack(
         children: [
           ListView.builder(
@@ -24,7 +27,7 @@ class _ChatLayoutState extends State<ChatLayout> {
             physics: BouncingScrollPhysics(),
           ),
           Positioned(
-            height: 50.0,
+            height: 70.0,
             width: MediaQuery.of(context).size.width,
             bottom: 1.0,
             left: 1.0,
@@ -64,6 +67,13 @@ class _ChatLayoutState extends State<ChatLayout> {
                     var hasFM = _response.queryResult.hasFulfillmentMessages;
                     if (hasPayloads) {
                       var ss = _response.queryResult.getPayloads();
+                      ss.forEach((element) {
+                        if (element.hasButtons) {
+                          var urlButtons = element.getButtons(
+                              buttonType: PayloadButtonType.URL);
+                          print(urlButtons.length);
+                        }
+                      });
                       print('hola');
                     }
                     if (_response.queryResult.fulfillmentMessages[_position]

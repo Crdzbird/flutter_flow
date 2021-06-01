@@ -51,10 +51,6 @@ extension QueryResultExtension on QueryResult {
             .toList();
   }
 
-  List<Payload?> getPayloadsByType(
-      {PayloadType type = PayloadType.CARD,
-      PayloadButtonType buttonType = PayloadButtonType.POSTBACK}) {}
-
   List<String> obtainQuickReplies(String platform) {
     if (fulfillmentMessages == null || fulfillmentMessages!.isEmpty) return [];
     var _quickReplies = <String>[];
